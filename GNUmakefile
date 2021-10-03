@@ -30,7 +30,7 @@ test: ## Run tests.
 	@TF_ACC=1 go test ./... -v -race -count=1 -timeout 120m
 
 build: tools ## Build binary with goreleaser.
-	@$(GOBIN)/goreleaser release --skip-publish
+	@$(GOBIN)/goreleaser release --skip-publish --rm-dist
 
 clean: ## Clean this directory
 	@rm -fr $(CACHE) dist/ || true
