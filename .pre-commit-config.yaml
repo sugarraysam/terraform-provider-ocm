@@ -1,0 +1,40 @@
+# Supported hooks: https://pre-commit.com/hooks.html
+#
+# Install hooks:
+#   $ pre-commit install
+# Update hooks:
+#   $ pre-commit autoupdate
+---
+exclude: "^vendor/"
+fail_fast: true
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: pretty-format-json
+        args:
+          - --autofix
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: fmt
+        name: fmt
+        language: system
+        entry: make fmt
+        pass_filenames: false
+
+  - repo: local
+    hooks:
+      - id: lint
+        name: lint
+        language: system
+        entry: make lint
+        pass_filenames: false
