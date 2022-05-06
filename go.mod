@@ -10,6 +10,6 @@ require (
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.8.0
 	github.com/katbyte/terrafmt v0.3.0
 	github.com/pavius/impi v0.0.3
-	github.com/terraform-linters/tflint v0.32.1
-	golang.org/x/tools v0.1.5
+	github.com/terraform-linters/tflint v0.36.1
+	golang.org/x/tools v0.1.10
 )
