@@ -11,5 +11,5 @@ require (
 	github.com/katbyte/terrafmt v0.3.0
 	github.com/pavius/impi v0.0.3
 	github.com/terraform-linters/tflint v0.32.1
-	golang.org/x/tools v0.1.5
+	golang.org/x/tools v0.1.11
 )
